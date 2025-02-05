@@ -1,0 +1,7 @@
+pyotp
+uvicorn
+fastapi[all] 
+python-jose[cryptography] 
+requests
+"passlib[bcrypt]"
+/Volumes/OwnModules/NKDatabase-1.0.0-py3-none-any.whl
