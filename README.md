@@ -64,6 +64,9 @@ Used for MFA authentication.
 
     - `mfaAPI` is the name of the Python file (e.g., `mfaAPI.py`).
     - `app` is the name of the FastAPI instance.
+    - `--host` default 0.0.0.0.
+    - `--port` default is port 8000.
+    - `-reload` reloads when changes is detected.
 
 2. **Access the application**:
 
