@@ -22,9 +22,17 @@ Used for MFA authentication.
 
 2. **Create a virtual environment**:
 
-    ```sh
-    python3 -m venv venv
-    ```
+    - On Windows:
+
+        ```sh
+        python -m venv venv
+        ```
+
+    - On macOS/Linux:
+
+        ```sh
+        python3 -m venv venv
+        ```
 
 3. **Activate the virtual environment**:
 
