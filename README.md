@@ -122,16 +122,9 @@ Used for MFA authentication.
     'http://127.0.0.1:8000/token' \
     -H 'accept: application/json' \
     -H 'Content-Type: application/x-www-form-urlencoded' \
-    -d 'grant_type=password&username=<Username>&password=<password>=&client_id=string&client_secret=string'
+    -d 'grant_type=password&username=<USERNAME>&password=<PASSWORD>=&client_id=string&client_secret=string'
     ```
-1. **Using curl for the API **:
-    ```curl
-    curl -X 'POST' \
-    'http://127.0.0.1:8000/token' \
-    -H 'accept: application/json' \
-    -H 'Content-Type: application/x-www-form-urlencoded' \
-    -d 'grant_type=password&username=<span style="color:red;"><Username></span>&password=<span style="color:red;"><password></span>&client_id=string&client_secret=string'
-    ```
+
     returns (eks):
     ```json
     {
