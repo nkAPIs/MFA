@@ -125,7 +125,27 @@ Used for MFA authentication.
     ```curl
     curl -H "Authorization: Bearer YOUR_TOKEN" "http://127.0.0.1:8000/getsecret?secret=YOUR_SECRET_KEY"
     ```
+# Database
+### table
+    public.nkinitvalues
+
+1. **Select from table in order to username and password**:
+    ```sql
+    SELECT id, name, description, type_id, value, debugmode
+	FROM public.nkinitvalues 
+    where id = 'mfaAPI';
+    ```
+2. **Returns**:
+    ---
+    | id          | name        | value         |
+    | :---        |    :----:   |          ---: |
+    | mfaAPI      | user        | nkMFAAPIUser  |
+    | mfaAPI      | password    | *** pw *****  |
+    ---
+    user and password is used for obtaining a token.
+
+    ** NOTE token expires after 30 minutes **
 
 # Docker
 
-## ToDo!!
+## Making the docker instance
