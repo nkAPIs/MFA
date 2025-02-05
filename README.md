@@ -77,7 +77,7 @@ Used for MFA authentication.
     - Swagger UI: `http://127.0.0.1:8000/docs`
 
 ## Using
-
+** Note that 127.0.0.1 is an example and proberly not the correct IP adress if the API is used on a docker instance **
 1. **Using the API from Python**:
     ```python
     import requests
