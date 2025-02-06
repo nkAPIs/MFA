@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import JWTError, jwt
@@ -6,11 +7,7 @@ from passlib.context import CryptContext
 import pyotp
 from constants import Constants
 
-def get_config(section, debug_mode):
-    # This function should return configuration details from your setup.
-    constants = Constants()
-    return {"access-user": constants.user, "access-token": constants.password}
-
+# **************************************************************************************
 # Secret key and algorithm for JWT
 SECRET_KEY = "1i743secret_key"
 ALGORITHM = "HS256"
@@ -69,3 +66,11 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()):
 @app.get("/getsecret")
 async def read_item(secret: str, token: str = Depends(verify_token)):
     return {"token": generate_totp(secret)}
+
+
+# **************************************************************************************
+# **************************************************************************************
+if __name__ == "__main__":
+    uvicorn.run(app,port=8000, host="0.0.0.0")
+# **************************************************************************************
+# **************************************************************************************
