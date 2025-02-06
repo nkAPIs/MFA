@@ -9,9 +9,11 @@ from constants import Constants
 
 # **************************************************************************************
 # Secret key and algorithm for JWT
-SECRET_KEY = "1i743secret_key"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+constants = Constants()
+
+SECRET_KEY = constants.SECRET_KEY 
+ALGORITHM = constants.ALGORITHM 
+ACCESS_TOKEN_EXPIRE_MINUTES = constants.ACCESS_TOKEN_EXPIRE_MINUTES 
 
 app = FastAPI()
 
@@ -20,7 +22,7 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/token")
 # Password hashing
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-constants = Constants()
+
 
 def authenticate_user(username: str, password: str):
     if username == constants.user and password == constants.password:
