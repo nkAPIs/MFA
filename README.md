@@ -22,9 +22,17 @@ Used for MFA authentication.
 
 2. **Create a virtual environment**:
 
-    ```sh
-    python3 -m venv venv
-    ```
+    - On Windows:
+
+        ```sh
+        python -m venv venv
+        ```
+
+    - On macOS/Linux:
+
+        ```sh
+        python3 -m venv venv
+        ```
 
 3. **Activate the virtual environment**:
 
@@ -56,6 +64,9 @@ Used for MFA authentication.
 
     - `mfaAPI` is the name of the Python file (e.g., `mfaAPI.py`).
     - `app` is the name of the FastAPI instance.
+    - `--host` default 0.0.0.0.
+    - `--port` default is port 8000.
+    - `-reload` reloads when changes is detected.
 
 2. **Access the application**:
 
@@ -66,7 +77,7 @@ Used for MFA authentication.
     - Swagger UI: `http://127.0.0.1:8000/docs`
 
 ## Using
-
+** Note that 127.0.0.1 is an example and probably not the correct IP adress if the API is used on a docker instance **
 1. **Using the API from Python**:
     ```python
     import requests
@@ -111,7 +122,7 @@ Used for MFA authentication.
     'http://127.0.0.1:8000/token' \
     -H 'accept: application/json' \
     -H 'Content-Type: application/x-www-form-urlencoded' \
-    -d 'grant_type=password&username=<Username>&password=<password>=&client_id=string&client_secret=string'
+    -d 'grant_type=password&username=<USERNAME>&password=<PASSWORD>=&client_id=string&client_secret=string'
     ```
 
     returns (eks):
