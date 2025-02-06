@@ -11,9 +11,9 @@ from constants import Constants
 # Secret key and algorithm for JWT
 constants = Constants()
 
-SECRET_KEY = constants.SECRET_KEY 
-ALGORITHM = constants.ALGORITHM 
-ACCESS_TOKEN_EXPIRE_MINUTES = constants.ACCESS_TOKEN_EXPIRE_MINUTES 
+SECRET_KEY = constants.SECRET_KEY
+ALGORITHM = constants.ALGORITHM
+ACCESS_TOKEN_EXPIRE_MINUTES = constants.ACCESS_TOKEN_EXPIRE_MINUTES
 
 app = FastAPI()
 
@@ -72,7 +72,7 @@ async def read_item(secret: str, token: str = Depends(verify_token)):
 
 # **************************************************************************************
 # **************************************************************************************
-if __name__ == "__main__":
-    uvicorn.run(app,port=8000, host="0.0.0.0")
+# if __name__ == "__main__":
+#     uvicorn.run(app,port=8000, host="0.0.0.0")
 # **************************************************************************************
 # **************************************************************************************
